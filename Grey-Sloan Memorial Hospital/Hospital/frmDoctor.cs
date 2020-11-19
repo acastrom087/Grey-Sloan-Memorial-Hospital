@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Hospital
 {
-    public partial class Form1 : Form
+    public partial class frmDoctor : Form
     {
-        public Form1()
+        public frmDoctor()
         {
             InitializeComponent();
         }
+
+       
     }
 }
