@@ -56,16 +56,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAgregarCirujia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarCirujia.Designer.cs">
+      <DependentUpon>frmAgregarCirujia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDoctor.Designer.cs">
       <DependentUpon>frmDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEnfermera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnfermera.Designer.cs">
+      <DependentUpon>frmEnfermera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaciente.Designer.cs">
+      <DependentUpon>frmPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgregarCirujia.resx">
+      <DependentUpon>frmAgregarCirujia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDoctor.resx">
       <DependentUpon>frmDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnfermera.resx">
+      <DependentUpon>frmEnfermera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaciente.resx">
+      <DependentUpon>frmPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
