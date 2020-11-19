@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class Cirujia
+    public class ECirujia
     {
         public int id { get; set; }
         public int id_quirofano { get; set; }
@@ -19,12 +19,12 @@ namespace CapaEntidad
         public System.TimeSpan horaInicio { get; set; }
         public System.TimeSpan horaFinal { get; set; }
 
-        public Cirujia()
+        public ECirujia()
         {
 
         }
 
-        public Cirujia(int id, int id_quirofano, int id_cirujano_principal, int id_cirujano2, int id_enfermero1, int id_enfermero2, int id_paciente, DateTime fecha, TimeSpan horaInicio, TimeSpan horaFinal)
+        public ECirujia(int id, int id_quirofano, int id_cirujano_principal, int id_cirujano2, int id_enfermero1, int id_enfermero2, int id_paciente, DateTime fecha, TimeSpan horaInicio, TimeSpan horaFinal)
         {
             this.id = id;
             this.id_quirofano = id_quirofano;

@@ -6,18 +6,21 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class Paciente: Persona
+    public class EEnfermera: EPersona
     {
 
-        public Paciente(): base()
+        public EEnfermera(): base()
         {
 
         }
 
-        public Paciente(int id, string cedula, string nombre, string apellido1, string apellido2) : 
+        public EEnfermera(int id, string cedula, string nombre, string apellido1, string apellido2): 
             base(id, cedula, nombre, apellido1, apellido2)
         {
-
+                
         }
+
+
+
     }
 }

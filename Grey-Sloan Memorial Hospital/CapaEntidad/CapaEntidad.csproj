@@ -51,14 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cirujia.cs" />
-    <Compile Include="Corazon.cs" />
-    <Compile Include="Doctor.cs" />
-    <Compile Include="Enfermera.cs" />
-    <Compile Include="Paciente.cs" />
-    <Compile Include="Persona.cs" />
+    <Compile Include="ECirujia.cs" />
+    <Compile Include="ECorazon.cs" />
+    <Compile Include="EDoctor.cs" />
+    <Compile Include="EEnfermera.cs" />
+    <Compile Include="EPaciente.cs" />
+    <Compile Include="EPersona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quirofano.cs" />
+    <Compile Include="EQuirofano.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

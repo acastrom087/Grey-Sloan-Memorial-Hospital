@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class Persona
+    public class EPersona
     {
         public int Id { get; set; }
         public string Cedula { get; set; }
@@ -15,12 +15,12 @@ namespace CapaEntidad
         public string Apellido2 { get; set; }
         
 
-        public Persona()
+        public EPersona()
         {
 
         }
 
-        public Persona(int id, string cedula, string nombre, string apellido1, string apellido2)
+        public EPersona(int id, string cedula, string nombre, string apellido1, string apellido2)
         {
             Id = id;
             Cedula = cedula;
