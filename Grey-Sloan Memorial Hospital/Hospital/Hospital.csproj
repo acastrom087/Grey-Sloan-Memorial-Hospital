@@ -62,6 +62,12 @@
     <Compile Include="frmAgregarCirujia.Designer.cs">
       <DependentUpon>frmAgregarCirujia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCirujias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCirujias.Designer.cs">
+      <DependentUpon>frmCirujias.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgregarCirujia.resx">
       <DependentUpon>frmAgregarCirujia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCirujias.resx">
+      <DependentUpon>frmCirujias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoctor.resx">
       <DependentUpon>frmDoctor.cs</DependentUpon>
