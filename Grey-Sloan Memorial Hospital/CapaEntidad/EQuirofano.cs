@@ -6,22 +6,20 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class Corazon
+    public class EQuirofano
     {
         public int Id { get; set; }
-        public int Ritmo { get; set; }
+        public int NumeroQuirofano { get; set; }
 
-        public Corazon()
+        public EQuirofano()
         {
 
         }
 
-        public Corazon(int id, int ritmo)
+        public EQuirofano(int id, int numeroQuirofano)
         {
             Id = id;
-            Ritmo = ritmo;
+            NumeroQuirofano = numeroQuirofano;
         }
     }
-
-
 }

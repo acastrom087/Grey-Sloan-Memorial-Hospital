@@ -104,9 +104,18 @@
             // cbxEspecialidad
             // 
             this.cbxEspecialidad.FormattingEnabled = true;
+            this.cbxEspecialidad.Items.AddRange(new object[] {
+            "Anestesiologo",
+            "Neuro Cirujano",
+            "Oncologo",
+            "Cirujano General",
+            "Cirujano Cardiotorácico",
+            "Cirujanos Plastico",
+            "Ortopedia",
+            "Cirujano Pediátrico"});
             this.cbxEspecialidad.Location = new System.Drawing.Point(632, 100);
             this.cbxEspecialidad.Name = "cbxEspecialidad";
-            this.cbxEspecialidad.Size = new System.Drawing.Size(121, 24);
+            this.cbxEspecialidad.Size = new System.Drawing.Size(156, 24);
             this.cbxEspecialidad.TabIndex = 18;
             // 
             // txtCedula
@@ -134,7 +143,7 @@
             // 
             this.txtApellido2.Location = new System.Drawing.Point(632, 29);
             this.txtApellido2.Name = "txtApellido2";
-            this.txtApellido2.Size = new System.Drawing.Size(119, 22);
+            this.txtApellido2.Size = new System.Drawing.Size(156, 22);
             this.txtApellido2.TabIndex = 14;
             // 
             // txtId
@@ -163,6 +172,7 @@
             this.btnAgregar.TabIndex = 26;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -172,6 +182,7 @@
             this.btnEliminar.TabIndex = 27;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -181,6 +192,7 @@
             this.btnEditar.TabIndex = 28;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // frmDoctor
             // 
@@ -205,7 +217,9 @@
             this.Controls.Add(this.txtApellido2);
             this.Controls.Add(this.txtId);
             this.Name = "frmDoctor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doctores";
+            this.Load += new System.EventHandler(this.frmDoctor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoctores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
