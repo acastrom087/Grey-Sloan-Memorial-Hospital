@@ -163,6 +163,7 @@
             this.dgvDoctores.RowTemplate.Height = 24;
             this.dgvDoctores.Size = new System.Drawing.Size(776, 234);
             this.dgvDoctores.TabIndex = 25;
+            this.dgvDoctores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDoctores_CellContentClick);
             // 
             // btnAgregar
             // 

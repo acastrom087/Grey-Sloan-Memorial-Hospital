@@ -53,6 +53,7 @@
             this.btnEditar.TabIndex = 43;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -62,6 +63,7 @@
             this.btnEliminar.TabIndex = 42;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -71,6 +73,7 @@
             this.btnAgregar.TabIndex = 41;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label6
             // 
@@ -162,6 +165,7 @@
             this.dgvEnfermera.RowTemplate.Height = 24;
             this.dgvEnfermera.Size = new System.Drawing.Size(776, 234);
             this.dgvEnfermera.TabIndex = 44;
+            this.dgvEnfermera.Click += new System.EventHandler(this.dgvEnfermera_Click);
             // 
             // frmEnfermera
             // 
@@ -185,6 +189,7 @@
             this.Controls.Add(this.txtId);
             this.Name = "frmEnfermera";
             this.Text = "Enfermera";
+            this.Load += new System.EventHandler(this.frmEnfermera_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnfermera)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

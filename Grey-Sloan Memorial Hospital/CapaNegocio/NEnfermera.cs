@@ -8,7 +8,7 @@ using CapaEntidad;
 
 namespace CapaNegocio
 {
-    class NEnfermera
+    public class NEnfermera
     {
 
         public void GuardarEnfermera(EEnfermera eEnfermera, int pid)

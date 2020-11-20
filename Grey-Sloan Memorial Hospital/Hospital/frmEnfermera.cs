@@ -7,14 +7,86 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaEntidad;
+using CapaNegocio;
 
 namespace Hospital
 {
     public partial class frmEnfermera : Form
     {
+        NEnfermera nEnfermera = new NEnfermera();
         public frmEnfermera()
         {
             InitializeComponent();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtId.Text == "")
+                {
+                    txtId.Text = "0";
+                }
+
+                EEnfermera nurse = new EEnfermera();
+                nurse.Cedula = txtCedula.Text;
+                nurse.Nombre = txtNombre.Text;
+                nurse.Apellido1 = txtApellido1.Text;
+                nurse.Apellido2 = txtApellido2.Text;
+                int pid = int.Parse(txtId.Text);
+                nEnfermera.GuardarEnfermera(nurse, pid);
+                CargarEnfermeras();
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void CargarEnfermeras()
+        {
+            dgvEnfermera.DataSource = null;
+            dgvEnfermera.DataSource = nEnfermera.CargarEnfermeras();
+        }
+
+        private void Limpiar()
+        {
+            txtCedula.Text = "";
+            txtNombre.Text = "";
+            txtApellido1.Text = "";
+            txtApellido2.Text = "";
+            txtId.Text = "";
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            txtId.Text = dgvEnfermera.CurrentRow.Cells[0].Value.ToString();
+            txtCedula.Text = dgvEnfermera.CurrentRow.Cells[1].Value.ToString();
+            txtNombre.Text = dgvEnfermera.CurrentRow.Cells[2].Value.ToString();
+            txtApellido1.Text = dgvEnfermera.CurrentRow.Cells[3].Value.ToString();
+            txtApellido2.Text = dgvEnfermera.CurrentRow.Cells[4].Value.ToString();
+            
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int pid = int.Parse(dgvEnfermera.CurrentRow.Cells[0].Value.ToString());
+            nEnfermera.EliminarEnfermera(pid);
+            CargarEnfermeras();
+        }
+
+        private void frmEnfermera_Load(object sender, EventArgs e)
+        {
+            CargarEnfermeras();
+        }
+
+        private void dgvEnfermera_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }
