@@ -94,5 +94,10 @@ namespace Hospital
             nDoctor.EliminarDoctor(pid);
             CargarDoctores();
         }
+
+        private void dgvDoctores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Limpiar();
+        }
     }
 }
