@@ -53,6 +53,7 @@
             this.btnEditar.TabIndex = 56;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -62,6 +63,7 @@
             this.btnEliminar.TabIndex = 55;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -71,6 +73,7 @@
             this.btnAgregar.TabIndex = 54;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label6
             // 
@@ -162,6 +165,7 @@
             this.dgvPacientes.RowTemplate.Height = 24;
             this.dgvPacientes.Size = new System.Drawing.Size(776, 237);
             this.dgvPacientes.TabIndex = 57;
+            this.dgvPacientes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvPacientes_MouseClick);
             // 
             // frmPaciente
             // 
@@ -185,6 +189,7 @@
             this.Controls.Add(this.txtId);
             this.Name = "frmPaciente";
             this.Text = "Paciente";
+            this.Load += new System.EventHandler(this.frmPaciente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
