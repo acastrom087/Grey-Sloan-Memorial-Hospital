@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="NDoctor.cs" />
     <Compile Include="NEnfermera.cs" />
+    <Compile Include="NPaciente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
