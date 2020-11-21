@@ -16,7 +16,7 @@ namespace Hospital
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPaciente());
+            Application.Run(new frmAgregarCirujia());
         }
     }
 }

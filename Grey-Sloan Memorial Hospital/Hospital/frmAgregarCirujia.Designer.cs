@@ -103,6 +103,7 @@
             this.cbxCirujano1.Name = "cbxCirujano1";
             this.cbxCirujano1.Size = new System.Drawing.Size(121, 24);
             this.cbxCirujano1.TabIndex = 35;
+            this.cbxCirujano1.SelectionChangeCommitted += new System.EventHandler(this.cbxCirujano1_SelectionChangeCommitted);
             // 
             // cbxCirujano2
             // 
@@ -119,6 +120,7 @@
             this.cbxEnfermero1.Name = "cbxEnfermero1";
             this.cbxEnfermero1.Size = new System.Drawing.Size(121, 24);
             this.cbxEnfermero1.TabIndex = 33;
+            this.cbxEnfermero1.SelectionChangeCommitted += new System.EventHandler(this.cbxEnfermero1_SelectionChangeCommitted);
             // 
             // cbxEnfermero2
             // 
@@ -251,6 +253,7 @@
             this.btnAgregar.TabIndex = 40;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // frmAgregarCirujia
             // 
@@ -282,6 +285,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmAgregarCirujia";
             this.Text = "frmAgregarCirujia";
+            this.Load += new System.EventHandler(this.frmAgregarCirujia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
