@@ -17,8 +17,8 @@
           <Property Name="id_enfermero2" Type="int" Nullable="false" />
           <Property Name="id_paciente" Type="int" Nullable="false" />
           <Property Name="fecha" Type="date" Nullable="false" />
-          <Property Name="horaInicio" Type="time" Precision="7" Nullable="false" />
-          <Property Name="horaFinal" Type="time" Precision="7" Nullable="false" />
+          <Property Name="horaInicio" Type="datetime" Nullable="false" />
+          <Property Name="horaFinal" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="doctor">
           <Key>
@@ -86,8 +86,8 @@
           <Property Name="id_enfermero2" Type="Int32" Nullable="false" />
           <Property Name="id_paciente" Type="Int32" Nullable="false" />
           <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="horaInicio" Type="Time" Nullable="false" Precision="7" />
-          <Property Name="horaFinal" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="horaInicio" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="horaFinal" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
         <EntityType Name="doctor">
           <Key>

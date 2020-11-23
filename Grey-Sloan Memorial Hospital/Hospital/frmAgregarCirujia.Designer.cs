@@ -66,9 +66,11 @@
             // 
             // dtpFinal
             // 
+            this.dtpFinal.CustomFormat = "";
             this.dtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpFinal.Location = new System.Drawing.Point(634, 181);
             this.dtpFinal.Name = "dtpFinal";
+            this.dtpFinal.ShowUpDown = true;
             this.dtpFinal.Size = new System.Drawing.Size(142, 22);
             this.dtpFinal.TabIndex = 39;
             // 
@@ -77,6 +79,7 @@
             this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpInicio.Location = new System.Drawing.Point(634, 67);
             this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.ShowUpDown = true;
             this.dtpInicio.Size = new System.Drawing.Size(142, 22);
             this.dtpInicio.TabIndex = 38;
             // 

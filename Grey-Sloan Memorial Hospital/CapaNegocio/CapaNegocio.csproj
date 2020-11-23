@@ -51,9 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NCirujia.cs" />
     <Compile Include="NDoctor.cs" />
     <Compile Include="NEnfermera.cs" />
     <Compile Include="NPaciente.cs" />
+    <Compile Include="NQuirofano.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
