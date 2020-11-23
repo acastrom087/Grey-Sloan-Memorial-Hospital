@@ -22,7 +22,7 @@ namespace CapaDatos
         public int id_enfermero2 { get; set; }
         public int id_paciente { get; set; }
         public System.DateTime fecha { get; set; }
-        public System.TimeSpan horaInicio { get; set; }
-        public System.TimeSpan horaFinal { get; set; }
+        public System.DateTime horaInicio { get; set; }
+        public System.DateTime horaFinal { get; set; }
     }
 }

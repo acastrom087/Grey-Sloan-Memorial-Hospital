@@ -16,10 +16,48 @@ namespace Hospital
     {
         NDoctor nDoctor = new NDoctor();
         NEnfermera nEnfermera = new NEnfermera();
+        NPaciente nPaciente = new NPaciente();
+        NCirujia nCirujia = new NCirujia();
+        NQuirofano nQuirofano = new NQuirofano();
+       
        
         public frmAgregarCirujia()
         {
             InitializeComponent();
+        }
+
+        private void LlenarQuirofanos()
+        {
+            var qui = new Dictionary<int, int?>();
+            foreach (var i in nQuirofano.CargarQuirofanos()) 
+            {
+                qui.Add(i.Id, i.NumeroQuirofano);
+
+            }
+            cbxQuirofano.DataSource = qui.ToList();
+            cbxQuirofano.ValueMember = "Key";
+            cbxQuirofano.DisplayMember = "Value";
+
+        }
+
+        private void LlenarPacientes()
+        {
+            var paciente = new Dictionary<int, string>();
+            foreach (EPaciente ePaciente in nPaciente.CargarPacientes()) 
+            {
+                //foreach (ECirujia eCirujia in nCirujia.CargarCirujias()  )
+                //{
+                   // if(ePaciente.Id != eCirujia.id_paciente)
+                   // {
+                        paciente.Add(ePaciente.Id, ePaciente.Nombre + " " + ePaciente.Apellido1);
+                   // }
+                //}
+
+            }
+            cbxPaciente.DataSource = paciente.ToList();
+            cbxPaciente.ValueMember = "Key";
+            cbxPaciente.DisplayMember = "Value";
+
         }
 
         private void LlenarEnfermeras1()
@@ -90,6 +128,12 @@ namespace Hospital
         {
             LlenarDoctores1();
             LlenarEnfermeras1();
+            LlenarPacientes();
+            LlenarQuirofanos();
+            dtpInicio.Format = DateTimePickerFormat.Custom;
+            dtpInicio.CustomFormat = "HH:mm:ss";
+            dtpFinal.Format = DateTimePickerFormat.Custom;
+            dtpFinal.CustomFormat = "HH:mm:ss";
         }
 
         private void cbxCirujano1_SelectionChangeCommitted(object sender, EventArgs e)
@@ -99,9 +143,25 @@ namespace Hospital
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            string feo = cbxCirujano1.SelectedValue.ToString();
-            
-            MessageBox.Show(feo);
+            try
+            {
+                ECirujia eCirujia = new ECirujia();
+                eCirujia.id_quirofano = int.Parse(cbxQuirofano.SelectedValue.ToString());
+                eCirujia.id_cirujano_principal = int.Parse(cbxCirujano1.SelectedValue.ToString());
+                eCirujia.id_cirujano2 = int.Parse(cbxCirujano2.SelectedValue.ToString());
+                eCirujia.id_enfermero1 = int.Parse(cbxEnfermero1.SelectedValue.ToString());
+                eCirujia.id_enfermero2 = int.Parse(cbxEnfermero2.SelectedValue.ToString());
+                eCirujia.id_paciente = int.Parse(cbxPaciente.SelectedValue.ToString());
+                eCirujia.fecha = DateTime.Parse(dtpFecha.Value.ToString("dd/MM/yyyy"));
+                eCirujia.horaInicio = DateTime.Parse(dtpInicio.Value.ToString("HH/mm/ss"));
+                eCirujia.horaFinal = DateTime.Parse(dtpFinal.Value.ToString("HH/mm/ss"));
+                nCirujia.GuardarCirujias(eCirujia, 0);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void cbxEnfermero1_SelectionChangeCommitted(object sender, EventArgs e)
