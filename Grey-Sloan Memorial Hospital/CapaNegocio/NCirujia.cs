@@ -42,36 +42,144 @@ namespace CapaNegocio
         {
             using(HospitalEntities db = new HospitalEntities())
             {
-                cirujia cir = null;
-                if(pid == 0)
+                foreach (ECirujia e in CargarCirujias())
                 {
-                    cir = new cirujia();
-                }
-                else
-                {
-                    cir = db.cirujia.Find(pid);
-                }
+                    if (e.fecha == eCirujia.fecha)
+                    {
+                        if (e.id_quirofano == eCirujia.id_quirofano)
+                        {
+                            if (e.horaInicio.Hour == eCirujia.horaInicio.Hour)
+                            {
+                                throw new Exception("Quirofano ocupado, cambie hora de inicio");
+                            }
+                            else if (eCirujia.horaInicio.Hour > e.horaInicio.Hour && e.horaInicio.Hour < e.horaFinal.Hour)
+                            {
+                                throw new Exception("Quirofano ocupado, cambie hora de inicio");
+                            }
+                            else if (eCirujia.horaFinal.Hour > e.horaInicio.Hour && e.horaInicio.Hour < e.horaFinal.Hour)
+                            {
+                                throw new Exception("Quirofano ocupado, cambie hora final");
+                            }
+                            else if (eCirujia.horaFinal.Hour > e.horaFinal.Hour)
+                            {
+                                throw new Exception("Quirofano ocupado, cambie hora final");
+                            }
+                        }
+                        else if (eCirujia.id_cirujano_principal == e.id_cirujano_principal)
+                        {
+                            if (e.horaInicio.Hour == eCirujia.horaInicio.Hour)
+                            {
+                                throw new Exception("El cirujano principal esta ocupado");
+                            }
+                            else if (eCirujia.horaInicio.Hour > e.horaInicio.Hour && e.horaInicio.Hour < e.horaFinal.Hour)
+                            {
+                                throw new Exception("El cirujano principal esta ocupado");
+                            }
+                            else if (eCirujia.horaFinal.Hour > e.horaInicio.Hour && e.horaInicio.Hour < e.horaFinal.Hour)
+                            {
+                                throw new Exception("El cirujano principal esta ocupado");
+                            }
+                            else if (eCirujia.horaFinal.Hour > e.horaFinal.Hour)
+                            {
+                                throw new Exception("El cirujano principal esta ocupado");
+                            }
 
-                cir.id_quirofano = eCirujia.id_quirofano;
-                cir.id_cirujano_principal = eCirujia.id_cirujano_principal;
-                cir.id_cirujano2 = eCirujia.id_cirujano2;
-                cir.id_enfermero1 = eCirujia.id_enfermero1;
-                cir.id_enfermero2 = eCirujia.id_enfermero2;
-                cir.id_paciente = eCirujia.id_paciente;
-                cir.fecha = eCirujia.fecha;
-                cir.horaInicio = eCirujia.horaInicio;
-                cir.horaFinal = eCirujia.horaFinal;
+                        }
+                        else if (eCirujia.id_cirujano2 == e.id_cirujano2)
+                        {
+                            if (e.horaInicio.Hour == eCirujia.horaInicio.Hour)
+                            {
+                                throw new Exception("El cirujano secundario esta ocupado");
+                            }
+                            else if (eCirujia.horaInicio.Hour > e.horaInicio.Hour && e.horaInicio.Hour < e.horaFinal.Hour)
+                            {
+                                throw new Exception("El cirujano secundario esta ocupado");
+                            }
+                            else if (eCirujia.horaFinal.Hour > e.horaInicio.Hour && e.horaInicio.Hour < e.horaFinal.Hour)
+                            {
+                                throw new Exception("El cirujano secundario esta ocupado");
+                            }
+                            else if (eCirujia.horaFinal.Hour > e.horaFinal.Hour)
+                            {
+                                throw new Exception("El cirujano secundario esta ocupado");
+                            }
 
-                if(pid == 0)
-                {
-                    db.cirujia.Add(cir);
-                }
-                else
-                {
-                    db.Entry(cir).State = System.Data.Entity.EntityState.Modified;
-                }
+                        }
+                        else if (eCirujia.id_enfermero1 == e.id_enfermero1)
+                        {
+                            if (e.horaInicio.Hour == eCirujia.horaInicio.Hour)
+                            {
+                                throw new Exception("El enfermero 1 esta ocupado");
+                            }
+                            else if (eCirujia.horaInicio.Hour > e.horaInicio.Hour && e.horaInicio.Hour < e.horaFinal.Hour)
+                            {
+                                throw new Exception("El enfermero 1esta ocupado");
+                            }
+                            else if (eCirujia.horaFinal.Hour > e.horaInicio.Hour && e.horaInicio.Hour < e.horaFinal.Hour)
+                            {
+                                throw new Exception("El enfermero 1 esta ocupado");
+                            }
+                            else if (eCirujia.horaFinal.Hour > e.horaFinal.Hour)
+                            {
+                                throw new Exception("El enfermero 1 esta ocupado");
+                            }
 
-                db.SaveChanges();
+                        }
+                        else if(eCirujia.id_enfermero2 == e.id_enfermero2)
+                        {
+                            if (e.horaInicio.Hour == eCirujia.horaInicio.Hour)
+                            {
+                                throw new Exception("El enfermero 2 esta ocupado");
+                            }
+                            else if (eCirujia.horaInicio.Hour > e.horaInicio.Hour && e.horaInicio.Hour < e.horaFinal.Hour)
+                            {
+                                throw new Exception("El enfermero 2 esta ocupado");
+                            }
+                            else if (eCirujia.horaFinal.Hour > e.horaInicio.Hour && e.horaInicio.Hour < e.horaFinal.Hour)
+                            {
+                                throw new Exception("El enfermero 2 esta ocupado");
+                            }
+                            else if (eCirujia.horaFinal.Hour > e.horaFinal.Hour)
+                            {
+                                throw new Exception("El enfermero 2 esta ocupado");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        cirujia cir = null;
+                        if (pid == 0)
+                        {
+                            cir = new cirujia();
+                        }
+                        else
+                        {
+                            cir = db.cirujia.Find(pid);
+                        }
+
+                        cir.id_quirofano = eCirujia.id_quirofano;
+                        cir.id_cirujano_principal = eCirujia.id_cirujano_principal;
+                        cir.id_cirujano2 = eCirujia.id_cirujano2;
+                        cir.id_enfermero1 = eCirujia.id_enfermero1;
+                        cir.id_enfermero2 = eCirujia.id_enfermero2;
+                        cir.id_paciente = eCirujia.id_paciente;
+                        cir.fecha = eCirujia.fecha;
+                        cir.horaInicio = eCirujia.horaInicio;
+                        cir.horaFinal = eCirujia.horaFinal;
+
+                        if (pid == 0)
+                        {
+                            db.cirujia.Add(cir);
+                        }
+                        else
+                        {
+                            db.Entry(cir).State = System.Data.Entity.EntityState.Modified;
+                        }
+
+                        db.SaveChanges();
+                    }
+
+                }
             }
         }
     }

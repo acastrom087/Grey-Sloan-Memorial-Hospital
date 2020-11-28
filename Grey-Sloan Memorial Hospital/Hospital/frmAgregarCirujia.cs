@@ -19,6 +19,7 @@ namespace Hospital
         NPaciente nPaciente = new NPaciente();
         NCirujia nCirujia = new NCirujia();
         NQuirofano nQuirofano = new NQuirofano();
+        
        
        
         public frmAgregarCirujia()
@@ -131,9 +132,9 @@ namespace Hospital
             LlenarPacientes();
             LlenarQuirofanos();
             dtpInicio.Format = DateTimePickerFormat.Custom;
-            dtpInicio.CustomFormat = "HH:mm:ss";
+            dtpInicio.CustomFormat = "dd / MM / yyyy HH: mm";
             dtpFinal.Format = DateTimePickerFormat.Custom;
-            dtpFinal.CustomFormat = "HH:mm:ss";
+            dtpFinal.CustomFormat = "dd / MM / yyyy HH: mm";
         }
 
         private void cbxCirujano1_SelectionChangeCommitted(object sender, EventArgs e)
@@ -153,8 +154,8 @@ namespace Hospital
                 eCirujia.id_enfermero2 = int.Parse(cbxEnfermero2.SelectedValue.ToString());
                 eCirujia.id_paciente = int.Parse(cbxPaciente.SelectedValue.ToString());
                 eCirujia.fecha = DateTime.Parse(dtpFecha.Value.ToString("dd/MM/yyyy"));
-                eCirujia.horaInicio = DateTime.Parse(dtpInicio.Value.ToString("HH/mm/ss"));
-                eCirujia.horaFinal = DateTime.Parse(dtpFinal.Value.ToString("HH/mm/ss"));
+                eCirujia.horaInicio = DateTime.Parse(dtpInicio.Value.ToString("dd/MM/yyyy HH:mm"));
+                eCirujia.horaFinal = DateTime.Parse(dtpFinal.Value.ToString("dd/MM/yyyy HH:mm"));
                 nCirujia.GuardarCirujias(eCirujia, 0);
             }
             catch (Exception ex)
