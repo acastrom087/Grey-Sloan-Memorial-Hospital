@@ -71,7 +71,7 @@
             this.dtpFinal.Location = new System.Drawing.Point(634, 181);
             this.dtpFinal.Name = "dtpFinal";
             this.dtpFinal.ShowUpDown = true;
-            this.dtpFinal.Size = new System.Drawing.Size(142, 22);
+            this.dtpFinal.Size = new System.Drawing.Size(218, 22);
             this.dtpFinal.TabIndex = 39;
             // 
             // dtpInicio
@@ -80,7 +80,7 @@
             this.dtpInicio.Location = new System.Drawing.Point(634, 67);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.ShowUpDown = true;
-            this.dtpInicio.Size = new System.Drawing.Size(142, 22);
+            this.dtpInicio.Size = new System.Drawing.Size(218, 22);
             this.dtpInicio.TabIndex = 38;
             // 
             // cbxPaciente
@@ -202,7 +202,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(582, 72);
+            this.label5.Location = new System.Drawing.Point(550, 73);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 20);
             this.label5.TabIndex = 24;
@@ -212,7 +212,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(582, 181);
+            this.label4.Location = new System.Drawing.Point(550, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 20);
             this.label4.TabIndex = 23;
@@ -263,7 +263,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(864, 450);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dtpFinal);
             this.Controls.Add(this.dtpInicio);
