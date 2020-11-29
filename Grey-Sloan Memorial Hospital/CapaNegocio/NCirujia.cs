@@ -10,6 +10,7 @@ namespace CapaNegocio
 {
     public class NCirujia
     {
+        NDoctor nDoctor = new NDoctor();
 
         public List<ECirujia> CargarCirujias()
         {
@@ -33,6 +34,50 @@ namespace CapaNegocio
                     eCirujia.horaInicio = i.horaInicio;
                     eCirujia.horaFinal = i.horaFinal;
                     ListaCirujias.Add(eCirujia);
+                }
+                return ListaCirujias;
+            }
+        }
+
+        public List<EConsulta> MostrarCirujias()
+        {
+            List<EConsulta> ListaCirujias = new List<EConsulta>();
+            using (HospitalEntities db = new HospitalEntities())
+            {
+                var lst = (from c in db.cirujia
+                           join q in db.quirofano
+                           on c.id_quirofano equals q.id
+                           join d in db.doctor
+                           on c.id_cirujano_principal equals d.id
+                           join e in db.enfermera
+                           on c.id_enfermero1 equals e.id
+                           join p in db.paciente
+                           on c.id_paciente equals p.id
+                           select new EConsulta
+                           {
+                               CirujiaId = c.id,
+                               QuirofanoNumero = q.numero,
+                               CirujanoPrincipal = d.apellido1 + " " + d.nombre,
+                               Paciente = p.apellido1 + " " + p.nombre,
+                               CirujanoSecundario = c.id_cirujano2.ToString(),
+                               Enfermero1 = e.apellido1 + " " + e.nombre,
+                               Fecha = c.fecha,
+                               Inicio = c.horaInicio,
+                               Final = c.horaFinal
+                           });
+
+
+                foreach (var i in lst)
+                {
+                    foreach (EDoctor eDoctor in nDoctor.CargarDoctores())
+                    {
+                        if (eDoctor.Id.ToString() == i.CirujanoSecundario)
+                        {
+                            i.CirujanoSecundario = eDoctor.Apellido1 + " " + eDoctor.Nombre;
+                        }
+
+                    }
+                    ListaCirujias.Add(i);
                 }
                 return ListaCirujias;
             }
@@ -180,6 +225,16 @@ namespace CapaNegocio
                     }
 
                 }
+            }
+        }
+
+        public void EliminarCirujias(int pid)
+        {
+            using (HospitalEntities db = new HospitalEntities())
+            {
+                cirujia cri = db.cirujia.Find(pid);
+                db.cirujia.Remove(cri);
+                db.SaveChanges();
             }
         }
     }

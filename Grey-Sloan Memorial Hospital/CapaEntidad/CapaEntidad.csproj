@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ECirujia.cs" />
+    <Compile Include="EConsulta.cs" />
     <Compile Include="ECorazon.cs" />
     <Compile Include="EDoctor.cs" />
     <Compile Include="EEnfermera.cs" />
