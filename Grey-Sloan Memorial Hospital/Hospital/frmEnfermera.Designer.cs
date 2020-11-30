@@ -188,6 +188,7 @@
             this.Controls.Add(this.txtApellido2);
             this.Controls.Add(this.txtId);
             this.Name = "frmEnfermera";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enfermera";
             this.Load += new System.EventHandler(this.frmEnfermera_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnfermera)).EndInit();

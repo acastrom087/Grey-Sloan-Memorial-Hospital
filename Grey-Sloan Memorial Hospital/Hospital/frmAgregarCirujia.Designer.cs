@@ -287,6 +287,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmAgregarCirujia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregarCirujia";
             this.Load += new System.EventHandler(this.frmAgregarCirujia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

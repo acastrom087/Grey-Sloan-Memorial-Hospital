@@ -99,6 +99,7 @@
             this.Controls.Add(this.btnCirujia);
             this.Controls.Add(this.btnDoctor);
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrincipal";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

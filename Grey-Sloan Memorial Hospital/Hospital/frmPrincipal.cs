@@ -19,13 +19,13 @@ namespace Hospital
 
         private void btnDoctor_Click(object sender, EventArgs e)
         {
-            frmCirujias frm = new frmCirujias();
+            frmDoctor frm = new frmDoctor();
             frm.Show();
         }
 
         private void btnEnfermera_Click(object sender, EventArgs e)
         {
-            frmDoctor frm = new frmDoctor();
+            frmEnfermera frm = new frmEnfermera();
             frm.Show();
         }
 

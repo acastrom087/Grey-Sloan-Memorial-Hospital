@@ -88,6 +88,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvCirujias);
             this.Name = "frmCirujias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cirujias";
             this.Load += new System.EventHandler(this.frmCirujias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCirujias)).EndInit();
