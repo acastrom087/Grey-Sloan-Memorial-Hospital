@@ -42,6 +42,7 @@
             this.txtApellido2 = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.dgvPacientes = new System.Windows.Forms.DataGridView();
+            this.btnDiagnosticar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,12 +168,22 @@
             this.dgvPacientes.TabIndex = 57;
             this.dgvPacientes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvPacientes_MouseClick);
             // 
+            // btnDiagnosticar
+            // 
+            this.btnDiagnosticar.Location = new System.Drawing.Point(644, 103);
+            this.btnDiagnosticar.Name = "btnDiagnosticar";
+            this.btnDiagnosticar.Size = new System.Drawing.Size(119, 29);
+            this.btnDiagnosticar.TabIndex = 58;
+            this.btnDiagnosticar.Text = "Diagnosticar";
+            this.btnDiagnosticar.UseVisualStyleBackColor = true;
+            // 
             // frmPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDiagnosticar);
             this.Controls.Add(this.dgvPacientes);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnEliminar);
@@ -188,6 +199,7 @@
             this.Controls.Add(this.txtApellido2);
             this.Controls.Add(this.txtId);
             this.Name = "frmPaciente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Paciente";
             this.Load += new System.EventHandler(this.frmPaciente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).EndInit();
@@ -212,5 +224,6 @@
         private System.Windows.Forms.TextBox txtApellido2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.DataGridView dgvPacientes;
+        private System.Windows.Forms.Button btnDiagnosticar;
     }
 }
