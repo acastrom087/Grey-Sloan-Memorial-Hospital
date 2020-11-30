@@ -74,6 +74,9 @@
     <Compile Include="doctor.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Enfermedad.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="enfermera.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>

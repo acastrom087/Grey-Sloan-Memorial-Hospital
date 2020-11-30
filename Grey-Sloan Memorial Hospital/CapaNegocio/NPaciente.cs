@@ -74,6 +74,7 @@ namespace CapaNegocio
                     pacient.Nombre = i.nombre;
                     pacient.Apellido1 = i.apellido1;
                     pacient.Apellido2 = i.apellido2;
+                   
                     ListaPacientes.Add(pacient);
                 }
             }

@@ -30,5 +30,6 @@ namespace CapaDatos
         public virtual DbSet<enfermera> enfermera { get; set; }
         public virtual DbSet<paciente> paciente { get; set; }
         public virtual DbSet<quirofano> quirofano { get; set; }
+        public virtual DbSet<Enfermedad> Enfermedad { get; set; }
     }
 }
