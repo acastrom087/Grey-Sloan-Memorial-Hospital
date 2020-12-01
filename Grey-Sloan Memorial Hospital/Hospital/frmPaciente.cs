@@ -64,16 +64,16 @@ namespace Hospital
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            txtId.Text = dgvPacientes.CurrentRow.Cells[0].Value.ToString();
-            txtCedula.Text = dgvPacientes.CurrentRow.Cells[1].Value.ToString();
-            txtNombre.Text = dgvPacientes.CurrentRow.Cells[2].Value.ToString();
-            txtApellido1.Text = dgvPacientes.CurrentRow.Cells[3].Value.ToString();
-            txtApellido2.Text = dgvPacientes.CurrentRow.Cells[4].Value.ToString();
+            txtId.Text = dgvPacientes.CurrentRow.Cells[1].Value.ToString();
+            txtCedula.Text = dgvPacientes.CurrentRow.Cells[2].Value.ToString();
+            txtNombre.Text = dgvPacientes.CurrentRow.Cells[3].Value.ToString();
+            txtApellido1.Text = dgvPacientes.CurrentRow.Cells[4].Value.ToString();
+            txtApellido2.Text = dgvPacientes.CurrentRow.Cells[5].Value.ToString();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            int pid = int.Parse(dgvPacientes.CurrentRow.Cells[0].Value.ToString());
+            int pid = int.Parse(dgvPacientes.CurrentRow.Cells[1].Value.ToString());
             nPaciente.EliminarPaciente(pid);
             CargarPacientes();
         }
@@ -86,6 +86,13 @@ namespace Hospital
         private void frmPaciente_Load(object sender, EventArgs e)
         {
             CargarPacientes();
+        }
+
+        private void btnDiagnosticar_Click(object sender, EventArgs e)
+        {
+            int pid = int.Parse(dgvPacientes.CurrentRow.Cells[1].Value.ToString());
+            frmEnfermedad frm = new frmEnfermedad(pid);
+            frm.Show();
         }
     }
 }

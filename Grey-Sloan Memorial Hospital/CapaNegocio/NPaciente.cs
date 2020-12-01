@@ -58,6 +58,18 @@ namespace CapaNegocio
             }
         }
 
+        public void Agregacion(int id, int pid)
+        {
+            using ( HospitalEntities db = new HospitalEntities())
+            {
+                paciente pac = new paciente();
+                pac = db.paciente.Find(id);
+                pac.id_enfermedad = pid;
+                db.Entry(pac).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+            }
+        }
+
         public List<EPaciente> CargarPacientes()
         {
             List<EPaciente> ListaPacientes = new List<EPaciente>();
