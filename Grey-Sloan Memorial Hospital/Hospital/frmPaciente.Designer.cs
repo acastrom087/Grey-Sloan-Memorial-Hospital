@@ -176,6 +176,7 @@
             this.btnDiagnosticar.TabIndex = 58;
             this.btnDiagnosticar.Text = "Diagnosticar";
             this.btnDiagnosticar.UseVisualStyleBackColor = true;
+            this.btnDiagnosticar.Click += new System.EventHandler(this.btnDiagnosticar_Click);
             // 
             // frmPaciente
             // 

@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="NCirujia.cs" />
     <Compile Include="NDoctor.cs" />
+    <Compile Include="NEnfermedad.cs" />
     <Compile Include="NEnfermera.cs" />
     <Compile Include="NPaciente.cs" />
     <Compile Include="NQuirofano.cs" />
