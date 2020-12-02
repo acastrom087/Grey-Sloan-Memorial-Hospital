@@ -21,7 +21,14 @@ namespace CapaEntidad
             Id = id;
             Ritmo = ritmo;
         }
+
+        public override string ToString()
+        {
+            return Ritmo + "";
+        }
     }
+
+
 
 
 }

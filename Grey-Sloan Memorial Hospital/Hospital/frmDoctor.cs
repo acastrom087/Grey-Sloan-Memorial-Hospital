@@ -34,6 +34,8 @@ namespace Hospital
                 eDoctor.Nombre = txtNombre.Text;
                 eDoctor.Apellido1 = txtApellido1.Text;
                 eDoctor.Apellido2 = txtApellido2.Text;
+                eDoctor.Salario = decimal.Parse( txtSalario.Text);
+                eDoctor.Corazon.Ritmo = 90;
                 if(cbxEspecialidad.SelectedItem == null)
                 {
                     throw new Exception("Debe Seleccionar una especialidad");
@@ -80,11 +82,12 @@ namespace Hospital
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            txtId.Text = dgvDoctores.CurrentRow.Cells[1].Value.ToString();
-            txtCedula.Text = dgvDoctores.CurrentRow.Cells[2].Value.ToString();
-            txtNombre.Text = dgvDoctores.CurrentRow.Cells[3].Value.ToString();
-            txtApellido1.Text = dgvDoctores.CurrentRow.Cells[4].Value.ToString();
-            txtApellido2.Text = dgvDoctores.CurrentRow.Cells[5].Value.ToString();
+            txtSalario.Text = dgvDoctores.CurrentRow.Cells[2].Value.ToString();
+            txtId.Text = dgvDoctores.CurrentRow.Cells[3].Value.ToString();
+            txtCedula.Text = dgvDoctores.CurrentRow.Cells[4].Value.ToString();
+            txtNombre.Text = dgvDoctores.CurrentRow.Cells[5].Value.ToString();
+            txtApellido1.Text = dgvDoctores.CurrentRow.Cells[6].Value.ToString();
+            txtApellido2.Text = dgvDoctores.CurrentRow.Cells[7].Value.ToString();
             cbxEspecialidad.Text = dgvDoctores.CurrentRow.Cells[0].Value.ToString();
         }
 
@@ -98,6 +101,12 @@ namespace Hospital
         private void dgvDoctores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Limpiar();
+        }
+
+        private void btnAumentar_Click(object sender, EventArgs e)
+        {
+            EDoctor eDoctor = new EDoctor();
+            eDoctor.ModificarSalario(2);
         }
     }
 }

@@ -31,6 +31,7 @@
           <Property Name="apellido2" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="especialidad" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="id_corazon" Type="int" />
+          <Property Name="salario" Type="money" Nullable="false" />
         </EntityType>
         <EntityType Name="Enfermedad">
           <Key>
@@ -49,6 +50,7 @@
           <Property Name="apellido1" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="apellido2" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="id_corazon" Type="int" />
+          <Property Name="salario" Type="money" Nullable="false" />
         </EntityType>
         <EntityType Name="paciente">
           <Key>
@@ -107,6 +109,7 @@
           <Property Name="apellido2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="especialidad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="id_corazon" Type="Int32" />
+          <Property Name="salario" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
         </EntityType>
         <EntityType Name="enfermera">
           <Key>
@@ -118,6 +121,7 @@
           <Property Name="apellido1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="apellido2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="id_corazon" Type="Int32" />
+          <Property Name="salario" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
         </EntityType>
         <EntityType Name="paciente">
           <Key>
@@ -178,6 +182,7 @@
           <EntitySetMapping Name="doctor">
             <EntityTypeMapping TypeName="HospitalModel.doctor">
               <MappingFragment StoreEntitySet="doctor">
+                <ScalarProperty Name="salario" ColumnName="salario" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="cedula" ColumnName="cedula" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
@@ -191,6 +196,7 @@
           <EntitySetMapping Name="enfermera">
             <EntityTypeMapping TypeName="HospitalModel.enfermera">
               <MappingFragment StoreEntitySet="enfermera">
+                <ScalarProperty Name="salario" ColumnName="salario" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="cedula" ColumnName="cedula" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />

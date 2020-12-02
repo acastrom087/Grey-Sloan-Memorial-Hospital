@@ -21,5 +21,10 @@ namespace CapaEntidad
             Id = id;
             Nombre = nombre;
         }
+
+        public override string ToString()
+        {
+            return Nombre;
+        }
     }
 }
