@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class EEnfermera : EPersona
+    public class EEnfermera : EPersona, Interface
     {
 
         public EEnfermera() : base()
@@ -18,6 +18,11 @@ namespace CapaEntidad
             : base(id, cedula, nombre, apellido1, apellido2)
         {
                 
+        }
+
+        public string trabajar()
+        {
+            throw new NotImplementedException();
         }
     }
 }

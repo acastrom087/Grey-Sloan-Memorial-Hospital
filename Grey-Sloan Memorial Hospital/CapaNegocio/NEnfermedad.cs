@@ -29,5 +29,23 @@ namespace CapaNegocio
             }
             return enfermedades;
         }
+
+        public EEnfermedad DevolverEnfermedad(int? id)
+        {
+            EEnfermedad eEnfermedad = new EEnfermedad();
+            using (HospitalEntities db = new HospitalEntities())
+            {
+                var enfermedad = from e in db.Enfermedad
+                                 where e.id == id
+                                 select e;
+                foreach (var i in enfermedad)
+                {
+                    eEnfermedad.Id = i.id;
+                    eEnfermedad.Nombre = i.nombre;
+                    
+                }            
+            }
+            return eEnfermedad;
+        }
     }
 }

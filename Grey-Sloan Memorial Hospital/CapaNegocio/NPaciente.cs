@@ -10,6 +10,7 @@ namespace CapaNegocio
 {
     public class NPaciente
     {
+        NEnfermedad nEnfermedad = new NEnfermedad();
         public void GuardarPaciente(EPaciente ePaciente, int pid)
         {
             using (HospitalEntities db = new HospitalEntities())
@@ -81,6 +82,7 @@ namespace CapaNegocio
                 foreach (var i in lst)
                 {
                     EPaciente pacient = new EPaciente();
+                    pacient.eEnfermedad = nEnfermedad.DevolverEnfermedad(i.id_enfermedad);
                     pacient.Id = i.id;
                     pacient.Cedula = i.cedula;
                     pacient.Nombre = i.nombre;
