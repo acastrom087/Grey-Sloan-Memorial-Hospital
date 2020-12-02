@@ -44,6 +44,9 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.btnAumentar = new System.Windows.Forms.Button();
+            this.txtSalario = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoctores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +89,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(535, 107);
+            this.label2.Location = new System.Drawing.Point(535, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 17);
             this.label2.TabIndex = 20;
@@ -113,7 +116,7 @@
             "Cirujanos Plastico",
             "Ortopedia",
             "Cirujano Pediátrico"});
-            this.cbxEspecialidad.Location = new System.Drawing.Point(632, 100);
+            this.cbxEspecialidad.Location = new System.Drawing.Point(632, 78);
             this.cbxEspecialidad.Name = "cbxEspecialidad";
             this.cbxEspecialidad.Size = new System.Drawing.Size(156, 24);
             this.cbxEspecialidad.TabIndex = 18;
@@ -167,7 +170,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(94, 159);
+            this.btnAgregar.Location = new System.Drawing.Point(44, 167);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(119, 31);
             this.btnAgregar.TabIndex = 26;
@@ -177,7 +180,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(632, 159);
+            this.btnEliminar.Location = new System.Drawing.Point(647, 167);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(119, 31);
             this.btnEliminar.TabIndex = 27;
@@ -187,7 +190,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(386, 159);
+            this.btnEditar.Location = new System.Drawing.Point(437, 167);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(119, 31);
             this.btnEditar.TabIndex = 28;
@@ -195,12 +198,41 @@
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // btnAumentar
+            // 
+            this.btnAumentar.Location = new System.Drawing.Point(232, 167);
+            this.btnAumentar.Name = "btnAumentar";
+            this.btnAumentar.Size = new System.Drawing.Size(119, 31);
+            this.btnAumentar.TabIndex = 29;
+            this.btnAumentar.Text = "Aumentar";
+            this.btnAumentar.UseVisualStyleBackColor = true;
+            this.btnAumentar.Click += new System.EventHandler(this.btnAumentar_Click);
+            // 
+            // txtSalario
+            // 
+            this.txtSalario.Location = new System.Drawing.Point(632, 123);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(156, 22);
+            this.txtSalario.TabIndex = 30;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(558, 128);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 17);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Salario:";
+            // 
             // frmDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtSalario);
+            this.Controls.Add(this.btnAumentar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
@@ -244,6 +276,9 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnAumentar;
+        private System.Windows.Forms.TextBox txtSalario;
+        private System.Windows.Forms.Label label7;
     }
 }
 

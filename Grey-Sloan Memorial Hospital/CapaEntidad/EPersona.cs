@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class EPersona
+    public abstract class EPersona
     {
         public int Id { get; set; }
         public string Cedula { get; set; }

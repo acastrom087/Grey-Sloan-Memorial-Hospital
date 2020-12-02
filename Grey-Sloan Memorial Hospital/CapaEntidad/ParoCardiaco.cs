@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public interface Interface
+   public interface ParoCardiaco
     {
-        string trabajar();
+        string AlterarRitmo();
     }
 }

@@ -20,5 +20,6 @@ namespace CapaDatos
         public string apellido1 { get; set; }
         public string apellido2 { get; set; }
         public Nullable<int> id_corazon { get; set; }
+        public decimal salario { get; set; }
     }
 }

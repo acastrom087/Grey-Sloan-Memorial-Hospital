@@ -39,7 +39,7 @@ namespace Hospital
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            int pid = int.Parse(dgvCirujias.CurrentRow.Cells[1].Value.ToString());
+            int pid = int.Parse(dgvCirujias.CurrentRow.Cells[0].Value.ToString());
             nCirujia.EliminarCirujias(pid);
             CargarCirujuas();
 

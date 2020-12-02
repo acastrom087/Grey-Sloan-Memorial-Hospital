@@ -4,28 +4,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace CapaEntidad
 {
-    public class EDoctor : EPersona
+    public class EDoctor : EPersona, ASalario, ParoCardiaco
     {
+        
         public string Especialidad { get; set; }
-        //public ECorazon OCorazon { get; set; }
+        public ECorazon Corazon { get; set; }
+        public decimal Salario { get; set; }
 
 
         public EDoctor() : base()
         {
-           // OCorazon = new ECorazon();
-           // OCorazon.Ritmo = 70;
-
+            Corazon = new ECorazon();
+            
         }
 
-        public EDoctor(int id, string cedula, string nombre, string apellido1, string apellido2 ,string especialidad) 
+        public EDoctor(int id, string cedula, string nombre, string apellido1, string apellido2 ,string especialidad, ECorazon corazon, decimal salario) 
             : base(id, cedula, nombre, apellido1, apellido2)
         {
+            Salario = salario;
             Especialidad = especialidad;
-           // OCorazon = new ECorazon();
-           // OCorazon.Ritmo = 70;
+            Corazon = corazon;
+            Corazon = new ECorazon();
+            
+            
+        }
 
+        public string ModificarSalario(int id)
+        {
+            Salario += 20000;
+            return "Salario aumentado";
+        }
+
+        public string AlterarRitmo()
+        {
+
+            Corazon.Ritmo = 1;
+            return "Le dio un paro cardiaco";
         }
     }
 }

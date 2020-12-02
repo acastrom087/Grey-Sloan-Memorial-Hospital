@@ -45,6 +45,7 @@ namespace CapaNegocio
                 doc.nombre = eDoctor.Nombre;
                 doc.apellido1 = eDoctor.Apellido1;
                 doc.apellido2 = eDoctor.Apellido2;
+                doc.salario = eDoctor.Salario;
                 doc.especialidad = eDoctor.Especialidad;
 
                 if(pid == 0)
@@ -76,6 +77,7 @@ namespace CapaNegocio
                     doctor.Nombre = i.nombre;
                     doctor.Apellido1 = i.apellido1;
                     doctor.Apellido2 = i.apellido2;
+                    doctor.Salario = i.salario;
                     doctor.Especialidad = i.especialidad;
                     ListaDoctores.Add(doctor);
                 }
