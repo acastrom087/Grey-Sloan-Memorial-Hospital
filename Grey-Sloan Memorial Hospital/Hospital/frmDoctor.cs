@@ -106,7 +106,7 @@ namespace Hospital
         private void btnAumentar_Click(object sender, EventArgs e)
         {
             EDoctor eDoctor = new EDoctor();
-            eDoctor.ModificarSalario(2);
+            eDoctor.ModificarSalario();
         }
     }
 }

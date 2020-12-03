@@ -32,7 +32,7 @@ namespace CapaEntidad
             
         }
 
-        public string ModificarSalario(int id)
+        public string ModificarSalario()
         {
             Salario += 20000;
             return "Salario aumentado";
@@ -41,8 +41,8 @@ namespace CapaEntidad
         public string AlterarRitmo()
         {
 
-            Corazon.Ritmo = 1;
-            return "Le dio un paro cardiaco";
+            Corazon.Ritmo = 200;
+            return "Tiene taquicardia";
         }
     }
 }
