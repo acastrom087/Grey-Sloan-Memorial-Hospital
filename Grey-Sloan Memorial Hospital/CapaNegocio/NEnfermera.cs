@@ -45,6 +45,7 @@ namespace CapaNegocio
                 nurse.nombre = eEnfermera.Nombre;
                 nurse.apellido1 = eEnfermera.Apellido1;
                 nurse.apellido2 = eEnfermera.Apellido2;
+                nurse.salario = eEnfermera.Salario;
 
                 if (pid == 0)
                 {
@@ -70,6 +71,7 @@ namespace CapaNegocio
                 foreach (var i in lst)
                 {
                     EEnfermera nurse = new EEnfermera();
+                    nurse.Salario = i.salario;
                     nurse.Id = i.id;
                     nurse.Cedula = i.cedula;
                     nurse.Nombre = i.nombre;

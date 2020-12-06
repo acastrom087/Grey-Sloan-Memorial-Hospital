@@ -12,6 +12,8 @@ namespace CapaDatos
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class HospitalEntities : DbContext
     {
@@ -31,5 +33,27 @@ namespace CapaDatos
         public virtual DbSet<paciente> paciente { get; set; }
         public virtual DbSet<quirofano> quirofano { get; set; }
         public virtual DbSet<Enfermedad> Enfermedad { get; set; }
+    
+        public virtual int AumentarSalario(Nullable<int> idp, Nullable<int> aumento)
+        {
+            var idpParameter = idp.HasValue ?
+                new ObjectParameter("idp", idp) :
+                new ObjectParameter("idp", typeof(int));
+    
+            var aumentoParameter = aumento.HasValue ?
+                new ObjectParameter("aumento", aumento) :
+                new ObjectParameter("aumento", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AumentarSalario", idpParameter, aumentoParameter);
+        }
+    
+        public virtual int CobrarIva(Nullable<int> iva)
+        {
+            var ivaParameter = iva.HasValue ?
+                new ObjectParameter("iva", iva) :
+                new ObjectParameter("iva", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("CobrarIva", ivaParameter);
+        }
     }
 }

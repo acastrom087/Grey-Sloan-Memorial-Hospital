@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaDatos;
 
 namespace CapaEntidad
 {
@@ -22,9 +23,13 @@ namespace CapaEntidad
             Corazon = new ECorazon();
         }
 
-        public string ModificarSalario()
+        public string ModificarSalario(int id)
         {
-            Salario = Salario - 50000;
+            using(HospitalEntities db = new HospitalEntities())
+            {
+                db.Database.ExecuteSqlCommand("CobrarIva @P0", id);
+            }
+            
             return "Salario Rebajado";
         }
 

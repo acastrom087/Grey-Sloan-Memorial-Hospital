@@ -8,6 +8,6 @@ namespace CapaEntidad
 {
     public interface ASalario
     {
-        string ModificarSalario();
+        string ModificarSalario(int id);
     }
 }
