@@ -93,7 +93,7 @@ namespace Hospital
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            int pid = int.Parse(dgvDoctores.CurrentRow.Cells[1].Value.ToString());
+            int pid = int.Parse(dgvDoctores.CurrentRow.Cells[3].Value.ToString());
             nDoctor.EliminarDoctor(pid);
             CargarDoctores();
         }
@@ -106,7 +106,9 @@ namespace Hospital
         private void btnAumentar_Click(object sender, EventArgs e)
         {
             EDoctor eDoctor = new EDoctor();
-            eDoctor.ModificarSalario();
+            int pid = int.Parse(dgvDoctores.CurrentRow.Cells[3].Value.ToString());
+            eDoctor.ModificarSalario(pid);
+            CargarDoctores();
         }
     }
 }

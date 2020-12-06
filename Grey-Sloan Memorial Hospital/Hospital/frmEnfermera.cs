@@ -88,5 +88,13 @@ namespace Hospital
         {
             Limpiar();
         }
+
+        private void btnIva_Click(object sender, EventArgs e)
+        {
+            EEnfermera eEnfermera = new EEnfermera();
+            int pid = int.Parse(dgvEnfermera.CurrentRow.Cells[2].Value.ToString());
+            eEnfermera.ModificarSalario(pid);
+            CargarEnfermeras();
+        }
     }
 }

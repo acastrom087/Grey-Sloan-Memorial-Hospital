@@ -71,6 +71,13 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="numero" Type="int" />
         </EntityType>
+        <Function Name="AumentarSalario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idp" Type="int" Mode="In" />
+          <Parameter Name="aumento" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CobrarIva" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iva" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="HospitalModelStoreContainer">
           <EntitySet Name="cirujia" EntityType="Self.cirujia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="doctor" EntityType="Self.doctor" Schema="dbo" store:Type="Tables" />
@@ -149,6 +156,13 @@
           <EntitySet Name="paciente" EntityType="Self.paciente" />
           <EntitySet Name="quirofano" EntityType="Self.quirofano" />
           <EntitySet Name="Enfermedad" EntityType="HospitalModel.Enfermedad" />
+          <FunctionImport Name="AumentarSalario">
+            <Parameter Name="idp" Mode="In" Type="Int32" />
+            <Parameter Name="aumento" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CobrarIva">
+            <Parameter Name="iva" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="Enfermedad">
           <Key>
@@ -235,6 +249,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AumentarSalario" FunctionName="HospitalModel.Store.AumentarSalario" />
+          <FunctionImportMapping FunctionImportName="CobrarIva" FunctionName="HospitalModel.Store.CobrarIva" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
