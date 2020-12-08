@@ -39,9 +39,17 @@ namespace Hospital
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            int pid = int.Parse(dgvCirujias.CurrentRow.Cells[0].Value.ToString());
-            nCirujia.EliminarCirujias(pid);
-            CargarCirujuas();
+            try
+            {
+                int pid = int.Parse(dgvCirujias.CurrentRow.Cells[0].Value.ToString());
+                nCirujia.EliminarCirujias(pid);
+                CargarCirujuas();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
@@ -49,6 +57,11 @@ namespace Hospital
         {
             frmAgregarCirujia frm = new frmAgregarCirujia();
             frm.Show();
+        }
+
+        private void btncargar_Click(object sender, EventArgs e)
+        {
+            CargarCirujuas();
         }
     }
 }

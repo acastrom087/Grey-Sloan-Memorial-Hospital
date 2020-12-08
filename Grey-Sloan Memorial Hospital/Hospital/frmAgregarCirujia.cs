@@ -157,6 +157,8 @@ namespace Hospital
                 eCirujia.horaInicio = DateTime.Parse(dtpInicio.Value.ToString("dd/MM/yyyy HH:mm"));
                 eCirujia.horaFinal = DateTime.Parse(dtpFinal.Value.ToString("dd/MM/yyyy HH:mm"));
                 nCirujia.GuardarCirujias(eCirujia, 0);
+                MessageBox.Show("Cirujia agregada");
+                this.Close();
             }
             catch (Exception ex)
             {
