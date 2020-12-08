@@ -34,6 +34,7 @@ namespace Hospital
                 nurse.Nombre = txtNombre.Text;
                 nurse.Apellido1 = txtApellido1.Text;
                 nurse.Apellido2 = txtApellido2.Text;
+                nurse.Salario = decimal.Parse( txtSalario.Text);
                 int pid = int.Parse(txtId.Text);
                 nEnfermera.GuardarEnfermera(nurse, pid);
                 CargarEnfermeras();
@@ -60,15 +61,17 @@ namespace Hospital
             txtApellido1.Text = "";
             txtApellido2.Text = "";
             txtId.Text = "";
+            txtSalario.Text = "";
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            txtId.Text = dgvEnfermera.CurrentRow.Cells[0].Value.ToString();
-            txtCedula.Text = dgvEnfermera.CurrentRow.Cells[1].Value.ToString();
-            txtNombre.Text = dgvEnfermera.CurrentRow.Cells[2].Value.ToString();
-            txtApellido1.Text = dgvEnfermera.CurrentRow.Cells[3].Value.ToString();
-            txtApellido2.Text = dgvEnfermera.CurrentRow.Cells[4].Value.ToString();
+            txtSalario.Text = dgvEnfermera.CurrentRow.Cells[0].Value.ToString();
+            txtId.Text = dgvEnfermera.CurrentRow.Cells[2].Value.ToString();
+            txtCedula.Text = dgvEnfermera.CurrentRow.Cells[3].Value.ToString();
+            txtNombre.Text = dgvEnfermera.CurrentRow.Cells[4].Value.ToString();
+            txtApellido1.Text = dgvEnfermera.CurrentRow.Cells[5].Value.ToString();
+            txtApellido2.Text = dgvEnfermera.CurrentRow.Cells[6].Value.ToString();
             
         }
 

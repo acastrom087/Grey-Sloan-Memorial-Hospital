@@ -25,9 +25,10 @@ namespace CapaEntidad
 
         public string ModificarSalario(int id)
         {
+            int seguro = 5000;
             using(HospitalEntities db = new HospitalEntities())
             {
-                db.Database.ExecuteSqlCommand("CobrarIva @P0", id);
+                db.Database.ExecuteSqlCommand("CobrarIva @P0", seguro);
             }
             
             return "Salario Rebajado";

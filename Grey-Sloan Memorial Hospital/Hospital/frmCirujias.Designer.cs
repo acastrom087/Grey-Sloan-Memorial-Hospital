@@ -33,6 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.btncargar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCirujias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -77,12 +78,23 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // btncargar
+            // 
+            this.btncargar.Location = new System.Drawing.Point(671, 113);
+            this.btncargar.Name = "btncargar";
+            this.btncargar.Size = new System.Drawing.Size(96, 28);
+            this.btncargar.TabIndex = 4;
+            this.btncargar.Text = "Cargar";
+            this.btncargar.UseVisualStyleBackColor = true;
+            this.btncargar.Click += new System.EventHandler(this.btncargar_Click);
+            // 
             // frmCirujias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1145, 562);
+            this.Controls.Add(this.btncargar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.pictureBox1);
@@ -103,5 +115,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btncargar;
     }
 }

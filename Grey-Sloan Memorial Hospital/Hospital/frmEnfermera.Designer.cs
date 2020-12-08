@@ -43,6 +43,8 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.dgvEnfermera = new System.Windows.Forms.DataGridView();
             this.btnIva = new System.Windows.Forms.Button();
+            this.txtSalario = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnfermera)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +83,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(30, 107);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 16);
+            this.label6.Size = new System.Drawing.Size(56, 17);
             this.label6.TabIndex = 40;
             this.label6.Text = "Cedula:";
             // 
@@ -90,7 +92,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(318, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 16);
+            this.label5.Size = new System.Drawing.Size(62, 17);
             this.label5.TabIndex = 39;
             this.label5.Text = "Nombre:";
             // 
@@ -99,7 +101,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(318, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 16);
+            this.label4.Size = new System.Drawing.Size(70, 17);
             this.label4.TabIndex = 38;
             this.label4.Text = "Apellido1:";
             // 
@@ -108,7 +110,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(542, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 16);
+            this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 37;
             this.label3.Text = "Apellido2";
             // 
@@ -117,7 +119,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(30, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 16);
+            this.label1.Size = new System.Drawing.Size(25, 17);
             this.label1.TabIndex = 35;
             this.label1.Text = "ID:";
             // 
@@ -178,12 +180,30 @@
             this.btnIva.UseVisualStyleBackColor = true;
             this.btnIva.Click += new System.EventHandler(this.btnIva_Click);
             // 
+            // txtSalario
+            // 
+            this.txtSalario.Location = new System.Drawing.Point(639, 100);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(119, 22);
+            this.txtSalario.TabIndex = 46;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(542, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 17);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "Salario";
+            // 
             // frmEnfermera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtSalario);
             this.Controls.Add(this.btnIva);
             this.Controls.Add(this.dgvEnfermera);
             this.Controls.Add(this.btnEditar);
@@ -226,5 +246,7 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.DataGridView dgvEnfermera;
         private System.Windows.Forms.Button btnIva;
+        private System.Windows.Forms.TextBox txtSalario;
+        private System.Windows.Forms.Label label2;
     }
 }
